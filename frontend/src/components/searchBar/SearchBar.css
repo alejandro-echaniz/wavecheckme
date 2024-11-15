@@ -1,68 +1,74 @@
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .searchInputs {
-    margin-top: 10px;
-    display: flex;
-  }
-  
-  .search input {
-    background-color: white;
-    border: 0;
-    border-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    font-size: 18px;
-    padding: 15px;
-    height: 30px;
-    width: 300px;
-  }
-  
-  .searchIcon {
-    height: 60px;
-    width: 50px;
-    background-color: white;
-    display: grid;
-    place-items: center;
-  }
-  
-  input:focus {
-    outline: none;
-  }
-  .searchIcon svg {
-    font-size: 35px;
-  }
-  
-  /* .dataResult {
-    margin-top: 5px;
-    width: 300px;
-    height: 200px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: hidden;
-    overflow-y: auto;
-   } */
-  
-  .dataResult::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .dataResult .dataItem {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-  
-  .dataItem p {
-    margin-left: 10px;
-  }
-  a {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    background-color: lightgrey;
-  }
-  
-  #clearBtn {
-    cursor: pointer;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px; 
+  width: 100%;
+  max-width: 400px;
+  padding-right: 40px;
+  transition: box-shadow 0.3s ease; 
+}
+
+.searchInputs:focus {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+input {
+  flex: 1;
+  border: 1px solid #ccc; 
+  border-radius: 50px; 
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+input:focus {
+  border-color: yellow; 
+  box-shadow: 0 0 5px yellow; 
+}
+
+button.search-icon {
+  position: absolute;
+  right: 10px; /* Position the icon inside the input */
+  opacity: 0; /* Start hidden */
+  transform: translateX(-50px); /* Initially move it out of the screen */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Animate both opacity and position */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+input:focus + button.search-icon {
+  opacity: 1; /* Make icon visible */
+  transform: translateX(0); /* Slide it into place */
+  transition-duration: 0.4s;
+}
+
+button.search-icon:disabled {
+  transition-duration: 0.4s;
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+}
