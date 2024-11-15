@@ -1,20 +1,26 @@
-import React from 'react';
-import "./SearchBar.css";
+/* SEARCHBAR.jsx */
 
-function SearchBar({placeholder, setSearchQuery}) {
+import React from 'react';
+import './SearchBar.css';
+
+function SearchBar({ placeholder, setSearchQuery }) {
 
   return (
     <div className="search">
       <div className="searchInputs">
-        <input type="text" placeholder={placeholder} onKeyDown={(e) => {
-          if(e.code === "Enter") {
-            let term = encodeURIComponent(e.target.value).replace(/%20/g, "+");
-            setSearchQuery(term);
-          }
-        }}/>
+        <input
+          type="text"
+          placeholder={placeholder}
+          onKeyDown={(e) => {
+            if (e.code === "Enter") {
+              const term = e.target.value;
+              setSearchQuery(term);  
+            }
+          }}
+        />
       </div>
     </div>
-  )
+  );
 }
 
-export default SearchBar
+export default SearchBar;

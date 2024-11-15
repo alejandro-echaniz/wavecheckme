@@ -3,31 +3,21 @@
 
 .App {
 	color: white;
-	height: 100vh;  
-	font-family: "Nunito", sans-serif;
-	background: linear-gradient(300deg, #ffa1ff, #ff419e, #9300e1, #a100a4, #541240);
-	background-size: 300% 300%;
-	animation: gradient-animation 25s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
-	0% {
-	  background-position: 0% 50%;
-	}
-	50% {
-	  background-position: 100% 50%;
-	}
-	100% {
-	  background-position: 0% 50%;
-	}
-  }
-
-  .main-content {
-	width: 100%; 
-	height: 100%; 
-	padding: 20px;
+	min-height: 100vh;
   }
   
   .content-wrapper {
-	height: 100%; 
+	display: flex;
+	flex-direction: column;  
+	height: 100vh; 
   }
+  
+  .main-content {
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	flex-grow: 1; 
+	padding: 20px;
+	box-sizing: border-box;
+  }
+  

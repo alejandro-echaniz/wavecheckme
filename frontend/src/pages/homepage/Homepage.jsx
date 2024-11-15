@@ -1,5 +1,8 @@
+/* Homepage.jsx */
+
 import React from 'react'
 import {useState} from 'react'
+import { useNavigate }from 'react-router-dom';
 
 import './Homepage.css'
 import Header from '../../components/header/Header'
@@ -10,6 +13,15 @@ import SearchBar from '../../components/searchBar/SearchBar'
 const Homepage = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState();
+	const navigate = useNavigate();
+
+	// Function to handle search
+	const handleSearch = (query) => {
+		setSearchQuery(query);  
+		setIsOpen(true);  
+		
+		navigate(`/search?q=${query}`);
+	  };
   
 	return (
 	  <div className="App">
@@ -18,10 +30,7 @@ const Homepage = () => {
 		  <main className="flex-grow-1 main-content d-flex align-items-center justify-content-center">
 			<SearchBar
 			  placeholder="Enter a song"
-			  setSearchQuery={(q) => {
-				setSearchQuery(q);
-				setIsOpen(true);
-			  }}
+			  setSearchQuery={handleSearch}
 			/>
 			{isOpen && <Modal setIsOpen={setIsOpen} searchQuery={searchQuery} />}
 		  </main>
