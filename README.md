@@ -17,3 +17,10 @@ users!
 
 ### specs
 - Node *v18.20.4*
+
+### APIs
+|   **Name**   | **Description** |
+| :------: | :---------- |
+|   [Spotify for Developrs](https://developer.spotify.com/) | Aiding for search autofill and playing song samples |
+| [Apple Music API](https://developer.apple.com/documentation/applemusicapi) | Training AI/ML recommendation Model |
+

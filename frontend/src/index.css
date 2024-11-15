@@ -1,3 +1,25 @@
-body {
+/* index.css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll due to animation */
+    background: linear-gradient(300deg, #ffa1ff, #ff419e, #9300e1, #a100a4, #541240);
+    background-size: 300% 300%;
+    animation: gradient-animation 25s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
 }
