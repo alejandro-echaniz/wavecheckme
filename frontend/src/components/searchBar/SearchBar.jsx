@@ -1,18 +1,18 @@
 /* SearchBar.jsx */
 
-import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa'; // Import magnifying glass icon
-import './SearchBar.css';
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa"; // Import magnifying glass icon
+import "./SearchBar.css";
 
 const SearchBar = ({ placeholder, setSearchQuery }) => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [hasError, setHasError] = useState(false);
 
   const handleKeyDown = (e) => {
-    if (e.code === 'Enter') {
+    if (e.code === "Enter") {
       const trimmedInput = input.trim();
       if (trimmedInput) {
-        setSearchQuery(encodeURIComponent(trimmedInput).replace(/%20/g, '+'));
+        setSearchQuery(encodeURIComponent(trimmedInput).replace(/%20/g, "+"));
         setHasError(false);
       } else {
         setHasError(true);
@@ -23,7 +23,7 @@ const SearchBar = ({ placeholder, setSearchQuery }) => {
   const handleClick = () => {
     const trimmedInput = input.trim();
     if (trimmedInput) {
-      setSearchQuery(encodeURIComponent(trimmedInput).replace(/%20/g, '+'));
+      setSearchQuery(encodeURIComponent(trimmedInput).replace(/%20/g, "+"));
       setHasError(false);
     } else {
       setHasError(true);
@@ -32,7 +32,7 @@ const SearchBar = ({ placeholder, setSearchQuery }) => {
 
   return (
     <div className="search">
-      <div className={`searchInputs ${hasError ? 'error' : ''}`}>
+      <div className={`searchInputs ${hasError ? "error" : ""}`}>
         <input
           type="text"
           placeholder={placeholder}

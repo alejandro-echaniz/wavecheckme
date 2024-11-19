@@ -1,12 +1,12 @@
-const path = require('path');
-const axios = require('axios');
+const path = require("path");
+const axios = require("axios");
 const express = require("express");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 let spotifyToken = ""; // Cache the token
-let tokenExpiry = 0;   // Store token expiry timestamp
+let tokenExpiry = 0; // Store token expiry timestamp
 
 const fetchSpotifyToken = async () => {
   const clientId = process.env.SPOTIFY_CLIENT_ID;
@@ -18,7 +18,9 @@ const fetchSpotifyToken = async () => {
       null,
       {
         headers: {
-          Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString("base64")}`,
+          Authorization: `Basic ${Buffer.from(
+            `${clientId}:${clientSecret}`
+          ).toString("base64")}`,
           "Content-Type": "application/x-www-form-urlencoded",
         },
         params: {
@@ -42,9 +44,8 @@ const ensureValidToken = async () => {
   }
 };
 
-
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
@@ -53,13 +54,14 @@ app.get("/api", (req, res) => {
 
 app.get("/getsong", (req, res) => {
   search = req.query.search;
-  axios.get("https://itunes.apple.com/search?term="+search)
-      .then((resp) => res.send(resp.data));
+  axios
+    .get("https://itunes.apple.com/search?term=" + search)
+    .then((resp) => res.send(resp.data));
 });
 
 // All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(PORT, () => {
