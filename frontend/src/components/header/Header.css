@@ -1,4 +1,6 @@
 /* Header.css */
+@import url("https://use.typekit.net/oaq8oqp.css");
+
 .header {
   color: white;
   display: flex;
@@ -19,12 +21,14 @@
 }
 
 .navbar-title {
+  font-family: "the-seasons", serif;
   font-size: 24px;
   font-weight: bold;
   color: white; /* Initial color */
 }
 
 .navbar-motto {
+  font-family: "instrument-sans-variable", sans-serif;
   font-size: 14px;
   color: #ccc;
   margin-top: 2px;

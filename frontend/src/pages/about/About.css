@@ -1,11 +1,14 @@
 /* About.css */
+@import url("https://use.typekit.net/oaq8oqp.css");
+
 .main-content {
   color: white;
-  padding: 20px; /* Ensures padding within the content area */
+  font-family: "instrument-sans-variable", sans-serif;
+  padding: 20px; 
 }
 
 h1 {
-  text-decoration: underline;
+  font-family: 'the-seasons', serif;
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
@@ -89,22 +92,23 @@ a {
 
 /* || IMAGE STYLING */
 .links-container {
-  display: flex; /* Arrange items in a row */
-  gap: 10px; /* Add space between the images */
-  justify-content: center; /* Center the links horizontally */
-  margin-top: 20px; /* Add space above the container */
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  margin-top: 20px; 
 }
 
 .links-container img {
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: transform 0.2s; /* Add a hover animation */
+  cursor: pointer; 
+  transition: transform 0.2s; 
 }
 
 .links-container img:hover {
-  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  transform: scale(1.1); 
 }
 
 .github-image {
+  /* thanks to https://codepen.io/sosuke/pen/Pjoqqp for making png color change */
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(318deg) brightness(104%) contrast(103%);
 }
 

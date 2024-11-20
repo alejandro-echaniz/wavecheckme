@@ -1,5 +1,8 @@
 /* Footer.css */
+@import url("https://use.typekit.net/oaq8oqp.css");
+
 .footer {
+  font-family: "instrument-sans-variable", sans-serif;
   position: fixed;
   bottom: 0;
   left: 0;
