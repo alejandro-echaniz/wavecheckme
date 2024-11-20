@@ -16,9 +16,9 @@ const About = () => {
           {/* Text Column with Fade-in Animation */}
           <motion.div
             className="text-column"
-            initial={{ opacity: 0 }}  
-            animate={{ opacity: 1 }}  
-            transition={{ duration: 1, ease: "easeOut" }} 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <h1>About Us</h1>
             <p id="welcome-paragraph">
@@ -96,9 +96,9 @@ const About = () => {
                   height={50}
                   width={50}
                   className="github-image"
-                  initial={{ opacity: 0 }}  
-                  animate={{ opacity: 1 }}  
-                  transition={{ duration: 1, delay: 0.5, ease: "easeOut" }} 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                 />
               </a>
               <a href="https://trello.com/b/UKWiHt7C/project-roadmap">
@@ -109,9 +109,9 @@ const About = () => {
                   height={50}
                   width={50}
                   className="trello-image"
-                  initial={{ opacity: 0 }}  
-                  animate={{ opacity: 1 }}  
-                  transition={{ duration: 1, delay: 0.7, ease: "easeOut" }} 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
                 />
               </a>
             </div>
@@ -120,9 +120,9 @@ const About = () => {
           {/* Image Column with Fade-in Animation */}
           <motion.div
             className="image-column"
-            initial={{ opacity: 0 }}  
-            animate={{ opacity: 1 }}  
-            transition={{ duration: 1, delay: 1, ease: "easeOut" }} 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
             <div className="container">
               <div className="sphere"></div>
