@@ -1,5 +1,5 @@
-/* About.jsx */
 import React from "react";
+import { motion } from "framer-motion";
 
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -13,8 +13,13 @@ const About = () => {
 
       <div className="main-content">
         <div className="about-layout">
-          {/* Text Column */}
-          <div className="text-column">
+          {/* Text Column with Fade-in Animation */}
+          <motion.div
+            className="text-column"
+            initial={{ opacity: 0 }}  // Start invisible
+            animate={{ opacity: 1 }}  // Fade to visible
+            transition={{ duration: 1, ease: "easeOut" }} // Duration of fade-in
+          >
             <h1>About Us</h1>
             <p id="welcome-paragraph">
               Welcome to <span className="waveCheck-word">WaveCheck.me</span>,
@@ -85,29 +90,40 @@ const About = () => {
             <div className="links-container">
               <a href="https://github.com/alejandro-echaniz/wavecheckme">
                 {" "}
-                <img
+                <motion.img
                   src="/images/github_logo.png"
                   alt="github link"
                   height={50}
                   width={50}
                   className="github-image"
-                />{" "}
+                  initial={{ opacity: 0 }}  // Start invisible
+                  animate={{ opacity: 1 }}  // Fade to visible
+                  transition={{ duration: 1, delay: 0.5, ease: "easeOut" }} // Delay and fade-in
+                />
               </a>
               <a href="https://trello.com/b/UKWiHt7C/project-roadmap">
                 {" "}
-                <img
+                <motion.img
                   src="/images/trello_logo.png"
                   alt="trello link"
                   height={50}
                   width={50}
                   className="trello-image"
-                />{" "}
+                  initial={{ opacity: 0 }}  // Start invisible
+                  animate={{ opacity: 1 }}  // Fade to visible
+                  transition={{ duration: 1, delay: 0.7, ease: "easeOut" }} // Delay and fade-in
+                />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Image Column */}
-          <div className="image-column">
+          {/* Image Column with Fade-in Animation */}
+          <motion.div
+            className="image-column"
+            initial={{ opacity: 0 }}  // Start invisible
+            animate={{ opacity: 1 }}  // Fade to visible
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }} // Delay and fade-in for image column
+          >
             <div className="container">
               <div className="sphere"></div>
               <a
@@ -115,14 +131,17 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <motion.img
                   src="/images/bitcamp_logo.gif"
                   alt="Animated Bitcamp logo, representing our project origins"
                   className="bitcamp-gif"
+                  initial={{ opacity: 0 }}  // Start invisible
+                  animate={{ opacity: 1 }}  // Fade to visible
+                  transition={{ duration: 1, delay: 1.5, ease: "easeOut" }} // Delay and fade-in
                 />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
