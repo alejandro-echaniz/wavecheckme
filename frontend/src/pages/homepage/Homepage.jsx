@@ -40,6 +40,8 @@ const Homepage = () => {
       <div className="content-wrapper d-flex flex-column min-vh-100">
         <Header className="w-100" />
         <main className="flex-grow-1 main-content d-flex align-items-center justify-content-center">
+          <h2>find your next favorite song</h2>
+
           <SearchBar placeholder="Enter a song" setSearchQuery={handleSearch} />
           {isOpen && (
             <Modal

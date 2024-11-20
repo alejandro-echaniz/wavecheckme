@@ -11,25 +11,25 @@ h1 {
 }
 
 .about-layout {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: flex-start; 
-  height: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .text-column {
-  flex: 1; 
-  padding: 20px; 
-  display: flex; 
+  flex: 1;
+  padding: 20px;
+  display: flex;
   flex-direction: column;
-  gap: 0.5px; 
+  gap: 0.5px;
 }
 
 .image-column {
-  flex: 1; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
@@ -61,28 +61,53 @@ a {
 }
 
 .descriptor-words {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* || BITCAMP LOGO STYLIGN */
 .container {
-    position: relative; 
-  }
-  
-  .sphere {
-    width: 350px; 
-    height: 350px; 
-    background-color: white; 
-    border-radius: 50%;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); 
-    position: absolute; 
-    top: 60%; 
-    left: 55%;
-    transform: translate(-50%, -50%); 
-    z-index: 1; 
-  }
-  
-  .bitcamp-gif {
-    position: relative; 
-    z-index: 2; 
-  }
+  position: relative;
+}
+
+.sphere {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.bitcamp-gif {
+  position: relative;
+  z-index: 2;
+}
+
+/* || IMAGE STYLING */
+.links-container {
+  display: flex; /* Arrange items in a row */
+  gap: 10px; /* Add space between the images */
+  justify-content: center; /* Center the links horizontally */
+  margin-top: 20px; /* Add space above the container */
+}
+
+.links-container img {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.2s; /* Add a hover animation */
+}
+
+.links-container img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.github-image {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(318deg) brightness(104%) contrast(103%);
+}
+
+.trello-image {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(318deg) brightness(104%) contrast(103%);
+}

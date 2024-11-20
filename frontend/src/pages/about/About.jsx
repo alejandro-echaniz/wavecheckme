@@ -81,6 +81,29 @@ const About = () => {
               Join us on this musical journey and let the rhythm take you to new
               horizons. 🌊🎶
             </p>
+
+            <div className="links-container">
+              <a href="https://github.com/alejandro-echaniz/wavecheckme">
+                {" "}
+                <img
+                  src="/images/github_logo.png"
+                  alt="github link"
+                  height={50}
+                  width={50}
+                  className="github-image"
+                />{" "}
+              </a>
+              <a href="https://trello.com/b/UKWiHt7C/project-roadmap">
+                {" "}
+                <img
+                  src="/images/trello_logo.png"
+                  alt="trello link"
+                  height={50}
+                  width={50}
+                  className="trello-image"
+                />{" "}
+              </a>
+            </div>
           </div>
 
           {/* Image Column */}

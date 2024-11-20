@@ -1,12 +1,12 @@
 /* index.css */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-
+/* .Catchy Mager */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Nunito", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scroll due to animation */
   background: linear-gradient(
     300deg,
